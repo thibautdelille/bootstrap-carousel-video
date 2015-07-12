@@ -79,7 +79,7 @@ var isSafariMobile = function() {
 
     jQuery.fn.removeClass = function(){
         // Execute the original method.
-        var result = originalAddClassMethod.apply( this, arguments );
+        var result = originalRemoveClassMethod.apply( this, arguments );
 
         // call your function
         // this gets called everytime you use the addClass method

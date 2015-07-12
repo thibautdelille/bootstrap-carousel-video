@@ -17,13 +17,12 @@
 
     // Build
     init: function () {
-      console.log('init CarouselVideo');
-      this.initVideo();
+      var self = this;
+      this.$element.find('.item').each(function(){
+        self.initSlide(this);
+      });
       this.setSize();
       this.$element.attr('data-ready', true);
-
-      this.$element.find('.item').each(function(){
-      });
       return this;
     },
 
@@ -31,9 +30,31 @@
       //second it
       this.$element.find('.item video').each(function(){
         $video = $(this);
-        $video.attr('data-width', $video.width());
-        $video.attr('data-height', $video.height());
-        $video.wrap('<div></div>').addClass('video-wrapper');
+        $wrap = $video.wrap('<div></div>').addClass('video-wrapper');
+      });
+    },
+
+    initSlide:function(slide){
+      var $video = $(slide).find('video');
+      if(!$video.length)
+        return;
+
+      $video.wrap('<div></div>');
+
+      if($(slide).hasClass('active')){
+        $video[0].play();
+      }
+      $(slide).on('addClass', function(e, classes){
+        if(classes.indexOf('active') >= 0){
+          console.log('Play', $video);
+          $video[0].play();
+        }
+      });
+      $(slide).on('removeClass', function(e, classes){
+        if(classes.indexOf('active') >= 0){
+          console.log('Stop');
+          $video[0].pause();
+        }
       });
     },
 
@@ -52,28 +73,31 @@
       var initW = parseInt($elt.data('width'));
       var initH = parseInt($elt.data('height'));
 
+      var carW = browser('width');
+      var carH = browser('height') - this.options.paddingBottom;
+
       var ratio = initW/initH;
 
       var newW, newH, top, left;
 
-      if(initW/initH > browser('width')/browser('height')){
-        newH = browser('height');
-        newW = initW*newH/initH;
+      if(initW/initH > carW/carH){
+        newH = carH;
+        newW = initW * newH / initH;
         top = 0;
-        left = (browser('width')-newW)/2;
+        left = ( carW - newW ) / 2;
       }else{
-        newW = browser('width');
-        newH = initH*newW/initW;
+        newW = carW;
+        newH = initH * newW / initW;
         left = 0;
-        top = (browser('height')-newH)/2;
+        top = ( carH - newH ) / 2;
       }
 
       $elt.parent().css({
         'width': newW+'px',
         'height': newH+'px',
-        'marginTop': top+'px',
-        'marginLeft': left+'px',
-      })
+        'top': top+'px',
+        'left': left+'px',
+      });
     }
   };
 

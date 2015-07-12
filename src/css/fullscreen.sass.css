@@ -7,3 +7,5 @@
     width: 100%; }
     [data-carouselvideo] .item video {
       width: 100%; }
+    [data-carouselvideo] .item .video-wrapper {
+      position: absolute; }
