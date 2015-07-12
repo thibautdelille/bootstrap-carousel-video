@@ -9,22 +9,11 @@ module.exports = function(grunt) {
           keepalive: true
         }
       }
-    },
-    copy: {
-      // Copy all ./assets/ folder to Jekyll folder
-      bower: {
-        files: [
-          {
-            expand: true,
-            cwd: '.',
-            src: ['/bower_components/bootstrap/dist/css/bootstap.min.css'],
-            dest: 'src' }
-        ]
-      },
     }
   });
 
   grunt.registerTask('server', ['connect:server']);
+  grunt.registerTask('s', ['server']);
 
   require('matchdep').filterDev('grunt-contrib*').forEach(grunt.loadNpmTasks);
 }
