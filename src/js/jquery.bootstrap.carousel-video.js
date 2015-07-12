@@ -18,9 +18,15 @@
     // Build
     init: function () {
       var self = this;
+
+      if(!this.$element.find('.item.active').length){
+        this.$element.find('.item:first').addClass('active');
+      }
+
       this.$element.find('.item').each(function(){
         self.initSlide(this);
       });
+
       this.setSize();
       this.$element.attr('data-ready', true);
       return this;
@@ -39,6 +45,10 @@
       if(!$video.length)
         return;
 
+      if(isMobile){
+        $video.remove();
+        return;
+      }
       $video.wrap('<div></div>');
 
       if($(slide).hasClass('active')){
@@ -63,6 +73,7 @@
       var self = this;
       var height = browser('height') - this.options.paddingBottom;
       this.$element.find('.item').css('height', height+'px');
+    console.log('setSize', height);
 
       this.$element.find('.item video').each(function(){
         self.centerElement($(this));
