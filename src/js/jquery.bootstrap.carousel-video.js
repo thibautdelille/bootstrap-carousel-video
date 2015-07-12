@@ -45,7 +45,7 @@
       if(!$video.length)
         return;
 
-      if(isMobile){
+      if(isMobile()){
         $video.remove();
         return;
       }
