@@ -9,7 +9,9 @@
   var CarouselVideo = function (element, options) {
     this.$element = $(element);
     this.options = options;
-    this.$window = $(window).on('resize', $.proxy(this.setSize, this));
+    if(!isMobile()){
+      this.$window = $(window).on('resize', $.proxy(this.setSize, this));
+    }
     this.init();
   };
 
