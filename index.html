@@ -6,9 +6,7 @@
   <link rel="stylesheet" href="/src/css/fullscreen.css">
 </head>
 <body>
-  <div class="row">
-    <div class="col-xs-12">
-      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-carouselvideo>
+      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-carouselvideo data-padding-bottom="50">
       <ol class="carousel-indicators">
         <li data-target="#carousel-example-generic" data-slide-to="0" class=""></li>
         <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
@@ -17,9 +15,15 @@
       <div class="carousel-inner" role="listbox">
         <div class="item" style="background-image: url(https://placeimg.com/1000/660/tech?1); background-size: cover; background-position: 50% 50%;">
         </div>
+        <div class="item active">
+          <video loop autoplay>
+            <source src="assets/video/video.mp4" type="video/mp4" />
+            <source src="assets/video/video.webm" type="video/webm" />
+          </video>
+        </div>
         <div class="item" style="background-image: url(https://placeimg.com/1000/660/tech?2); background-size: cover; background-position: 50% 50%;">
         </div>
-        <div class="item active" style="background-image: url(https://placeimg.com/1000/660/tech?3); background-size: cover; background-position: 50% 50%;">
+        <div class="item" style="background-image: url(https://placeimg.com/1000/660/tech?3); background-size: cover; background-position: 50% 50%;">
         </div>
       </div>
       <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
@@ -31,6 +35,20 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+      <h2>Lorem ipsum dolor sit amet</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dignissim quam eu interdum consequat. In non nunc fringilla, ullamcorper ante sit amet, varius justo. Donec malesuada eros vulputate, tempor lectus id, rhoncus massa. Duis eu ligula sed erat tincidunt tempus vel vel augue. Pellentesque ac tincidunt nunc. Pellentesque consectetur aliquet ligula eu rhoncus. Aenean laoreet urna eu risus congue cursus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus rhoncus mi ut odio vestibulum consectetur. Morbi vel nisl est. Duis sed ligula eget justo accumsan hendrerit ut at magna. Donec id volutpat nibh, vitae interdum odio.</p>
+
+      <p>Suspendisse tincidunt pharetra tempus. Suspendisse ut aliquet neque. Quisque condimentum massa at placerat cursus. Morbi ornare, quam a suscipit fringilla, arcu orci viverra neque, quis tristique libero tellus ut nisi. Phasellus sit amet est et erat egestas ultricies. Proin in euismod tellus. Praesent semper lorem mauris, ut pretium lacus imperdiet sit amet.</p>
+      </div>
+      <div class="col-md-6">
+      <h2>Suspendisse tincidunt pharetra tempus</h2>
+      <p>Suspendisse tincidunt pharetra tempus. Suspendisse ut aliquet neque. Quisque condimentum massa at placerat cursus. Morbi ornare, quam a suscipit fringilla, arcu orci viverra neque, quis tristique libero tellus ut nisi. Phasellus sit amet est et erat egestas ultricies. Proin in euismod tellus. Praesent semper lorem mauris, ut pretium lacus imperdiet sit amet.</p>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dignissim quam eu interdum consequat. In non nunc fringilla, ullamcorper ante sit amet, varius justo. Donec malesuada eros vulputate, tempor lectus id, rhoncus massa. Duis eu ligula sed erat tincidunt tempus vel vel augue. Pellentesque ac tincidunt nunc. Pellentesque consectetur aliquet ligula eu rhoncus. Aenean laoreet urna eu risus congue cursus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus rhoncus mi ut odio vestibulum consectetur. Morbi vel nisl est. Duis sed ligula eget justo accumsan hendrerit ut at magna. Donec id volutpat nibh, vitae interdum odio.</p>
+      </div>
     </div>
   </div>
 <script src="/bower_components/jquery/dist/jquery.min.js"></script>

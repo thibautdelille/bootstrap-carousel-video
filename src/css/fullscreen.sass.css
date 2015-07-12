@@ -1,6 +1,5 @@
 [data-carouselvideo] {
-  -webkit-transition: opacity 0.3s;
-          transition: opacity 0.3s;
+  transition: opacity 0.3s;
   opacity: 0; }
   [data-carouselvideo][data-ready="true"] {
     opacity: 1; }

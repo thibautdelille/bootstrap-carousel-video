@@ -56,3 +56,36 @@ var isSafariMobile = function() {
   var ua = navigator.userAgent || navigator.vendor || window.opera;
   return (/iPhone|iPod|iPad/).test(ua);
 };
+
+// Create a closure
+(function(){
+    // Your base, I'm in it!
+    var originalAddClassMethod = jQuery.fn.addClass;
+
+    jQuery.fn.addClass = function(){
+        // Execute the original method.
+        var result = originalAddClassMethod.apply( this, arguments );
+
+        // call your function
+        // this gets called everytime you use the addClass method
+        $(this).trigger('addClass', arguments);
+
+        // return the original result
+        return result;
+    }
+
+    // Your base, I'm in it!
+    var originalRemoveClassMethod = jQuery.fn.removeClass;
+
+    jQuery.fn.removeClass = function(){
+        // Execute the original method.
+        var result = originalAddClassMethod.apply( this, arguments );
+
+        // call your function
+        // this gets called everytime you use the addClass method
+        $(this).trigger('removeClass', arguments);
+
+        // return the original result
+        return result;
+    }
+})();

@@ -1,0 +1,13 @@
+[data-carouselvideo]{
+  transition:opacity 0.3s;
+  opacity: 0;
+  &[data-ready="true"]{
+    opacity: 1;
+  }
+  .item{
+    width:100%;
+    video{
+      width: 100%;
+    }
+  }
+}
