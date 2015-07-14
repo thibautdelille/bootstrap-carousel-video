@@ -1,3 +1,19 @@
+@charset "UTF-8";
+body {
+  font-family: 'Soleil W01 Light'; }
+
+h1 {
+  font-family: 'Soleil W01 Bold'; }
+
+p, li {
+  font-size: 20px;
+  text-shadow: none; }
+
+ul {
+  padding: 0; }
+  ul li {
+    list-style-type: none; }
+
 [data-carouselvideo] {
   transition: opacity 0.3s;
   opacity: 0; }
@@ -9,3 +25,72 @@
       width: 100%; }
     [data-carouselvideo] .item .video-wrapper {
       position: absolute; }
+  [data-carouselvideo] .container {
+    position: absolute;
+    width: 100%;
+    height: 100%; }
+  [data-carouselvideo] .carousel-caption {
+    color: #000;
+    width: 55%; }
+    [data-carouselvideo] .carousel-caption.bottom-left {
+      bottom: 10%;
+      left: 10%;
+      right: auto;
+      text-align: left; }
+    [data-carouselvideo] .carousel-caption.bottom-right {
+      bottom: 10%;
+      right: 10%;
+      left: auto;
+      text-align: right; }
+    [data-carouselvideo] .carousel-caption.top-right {
+      top: 10%;
+      right: 10%;
+      left: auto;
+      text-align: right; }
+    [data-carouselvideo] .carousel-caption.top-left {
+      top: 10%;
+      left: 10%;
+      right: auto;
+      text-align: left; }
+    [data-carouselvideo] .carousel-caption p {
+      padding: 8px 16px;
+      background-color: white;
+      margin: 0 0 10px;
+      display: inline-block; }
+    [data-carouselvideo] .carousel-caption li {
+      padding: 8px 16px 8px 46px;
+      background-color: white;
+      margin: 0 0 10px;
+      position: relative;
+      display: inline-block; }
+      [data-carouselvideo] .carousel-caption li:before {
+        content: '»';
+        padding-top: 8px;
+        font-size: 30px;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        background-color: #dc5034;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 30px;
+        height: 100%;
+        color: #fff; }
+    [data-carouselvideo] .carousel-caption a.cta {
+      font-size: 24px;
+      text-transform: uppercase;
+      text-decoration: none;
+      text-shadow: none;
+      background-color: #dc5034;
+      display: inline-block;
+      background-color: #dc5034;
+      padding: 8px 24px 8px 24px;
+      color: #fff; }
+    [data-carouselvideo] .carousel-caption.dark {
+      color: #fff; }
+      [data-carouselvideo] .carousel-caption.dark p, [data-carouselvideo] .carousel-caption.dark li {
+        background-color: #000; }
+  [data-carouselvideo] .carousel-control.left,
+  [data-carouselvideo] .carousel-control.right {
+    background: none; }
