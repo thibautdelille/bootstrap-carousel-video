@@ -25,9 +25,11 @@ ul {
     [data-carouselvideo] .item video {
       width: 100%; }
     [data-carouselvideo] .item .video-wrapper {
+      top: 0;
+      left: 0;
       position: absolute; }
   [data-carouselvideo] .container {
-    position: absolute;
+    position: relative;
     width: 100%;
     height: 100%; }
   [data-carouselvideo] .carousel-caption {
@@ -95,3 +97,171 @@ ul {
   [data-carouselvideo] .carousel-control.left,
   [data-carouselvideo] .carousel-control.right {
     background: none; }
+  [data-carouselvideo] .left .top-left,
+  [data-carouselvideo] .left .bottom-left,
+  [data-carouselvideo] .left .top-right,
+  [data-carouselvideo] .left .bottom-right, [data-carouselvideo] .active .top-left,
+  [data-carouselvideo] .active .bottom-left,
+  [data-carouselvideo] .active .top-right,
+  [data-carouselvideo] .active .bottom-right, [data-carouselvideo] .right .top-left,
+  [data-carouselvideo] .right .bottom-left,
+  [data-carouselvideo] .right .top-right,
+  [data-carouselvideo] .right .bottom-right {
+    /* animations */ }
+    [data-carouselvideo] .left .top-left .anim1,
+    [data-carouselvideo] .left .top-left .anim2,
+    [data-carouselvideo] .left .top-left .anim3,
+    [data-carouselvideo] .left .top-left .anim4,
+    [data-carouselvideo] .left .top-left .anim5,
+    [data-carouselvideo] .left .top-left .anim6,
+    [data-carouselvideo] .left .top-left .anim7,
+    [data-carouselvideo] .left .bottom-left .anim1,
+    [data-carouselvideo] .left .bottom-left .anim2,
+    [data-carouselvideo] .left .bottom-left .anim3,
+    [data-carouselvideo] .left .bottom-left .anim4,
+    [data-carouselvideo] .left .bottom-left .anim5,
+    [data-carouselvideo] .left .bottom-left .anim6,
+    [data-carouselvideo] .left .bottom-left .anim7,
+    [data-carouselvideo] .left .top-right .anim1,
+    [data-carouselvideo] .left .top-right .anim2,
+    [data-carouselvideo] .left .top-right .anim3,
+    [data-carouselvideo] .left .top-right .anim4,
+    [data-carouselvideo] .left .top-right .anim5,
+    [data-carouselvideo] .left .top-right .anim6,
+    [data-carouselvideo] .left .top-right .anim7,
+    [data-carouselvideo] .left .bottom-right .anim1, [data-carouselvideo] .left .bottom-right .anim2, [data-carouselvideo] .left .bottom-right .anim3, [data-carouselvideo] .left .bottom-right .anim4, [data-carouselvideo] .left .bottom-right .anim5, [data-carouselvideo] .left .bottom-right .anim6, [data-carouselvideo] .left .bottom-right .anim7, [data-carouselvideo] .active .top-left .anim1,
+    [data-carouselvideo] .active .top-left .anim2,
+    [data-carouselvideo] .active .top-left .anim3,
+    [data-carouselvideo] .active .top-left .anim4,
+    [data-carouselvideo] .active .top-left .anim5,
+    [data-carouselvideo] .active .top-left .anim6,
+    [data-carouselvideo] .active .top-left .anim7,
+    [data-carouselvideo] .active .bottom-left .anim1,
+    [data-carouselvideo] .active .bottom-left .anim2,
+    [data-carouselvideo] .active .bottom-left .anim3,
+    [data-carouselvideo] .active .bottom-left .anim4,
+    [data-carouselvideo] .active .bottom-left .anim5,
+    [data-carouselvideo] .active .bottom-left .anim6,
+    [data-carouselvideo] .active .bottom-left .anim7,
+    [data-carouselvideo] .active .top-right .anim1,
+    [data-carouselvideo] .active .top-right .anim2,
+    [data-carouselvideo] .active .top-right .anim3,
+    [data-carouselvideo] .active .top-right .anim4,
+    [data-carouselvideo] .active .top-right .anim5,
+    [data-carouselvideo] .active .top-right .anim6,
+    [data-carouselvideo] .active .top-right .anim7,
+    [data-carouselvideo] .active .bottom-right .anim1, [data-carouselvideo] .active .bottom-right .anim2, [data-carouselvideo] .active .bottom-right .anim3, [data-carouselvideo] .active .bottom-right .anim4, [data-carouselvideo] .active .bottom-right .anim5, [data-carouselvideo] .active .bottom-right .anim6, [data-carouselvideo] .active .bottom-right .anim7, [data-carouselvideo] .right .top-left .anim1,
+    [data-carouselvideo] .right .top-left .anim2,
+    [data-carouselvideo] .right .top-left .anim3,
+    [data-carouselvideo] .right .top-left .anim4,
+    [data-carouselvideo] .right .top-left .anim5,
+    [data-carouselvideo] .right .top-left .anim6,
+    [data-carouselvideo] .right .top-left .anim7,
+    [data-carouselvideo] .right .bottom-left .anim1,
+    [data-carouselvideo] .right .bottom-left .anim2,
+    [data-carouselvideo] .right .bottom-left .anim3,
+    [data-carouselvideo] .right .bottom-left .anim4,
+    [data-carouselvideo] .right .bottom-left .anim5,
+    [data-carouselvideo] .right .bottom-left .anim6,
+    [data-carouselvideo] .right .bottom-left .anim7,
+    [data-carouselvideo] .right .top-right .anim1,
+    [data-carouselvideo] .right .top-right .anim2,
+    [data-carouselvideo] .right .top-right .anim3,
+    [data-carouselvideo] .right .top-right .anim4,
+    [data-carouselvideo] .right .top-right .anim5,
+    [data-carouselvideo] .right .top-right .anim6,
+    [data-carouselvideo] .right .top-right .anim7,
+    [data-carouselvideo] .right .bottom-right .anim1, [data-carouselvideo] .right .bottom-right .anim2, [data-carouselvideo] .right .bottom-right .anim3, [data-carouselvideo] .right .bottom-right .anim4, [data-carouselvideo] .right .bottom-right .anim5, [data-carouselvideo] .right .bottom-right .anim6, [data-carouselvideo] .right .bottom-right .anim7 {
+      -webkit-transition: opacity 0.3s ease-in-out, left 0.3s ease-in-out;
+              transition: opacity 0.3s ease-in-out, left 0.3s ease-in-out;
+      left: 0px;
+      right: 0px;
+      opacity: 1;
+      position: relative; }
+    [data-carouselvideo] .left .top-left .anim1,
+    [data-carouselvideo] .left .bottom-left .anim1,
+    [data-carouselvideo] .left .top-right .anim1,
+    [data-carouselvideo] .left .bottom-right .anim1, [data-carouselvideo] .active .top-left .anim1,
+    [data-carouselvideo] .active .bottom-left .anim1,
+    [data-carouselvideo] .active .top-right .anim1,
+    [data-carouselvideo] .active .bottom-right .anim1, [data-carouselvideo] .right .top-left .anim1,
+    [data-carouselvideo] .right .bottom-left .anim1,
+    [data-carouselvideo] .right .top-right .anim1,
+    [data-carouselvideo] .right .bottom-right .anim1 {
+      -webkit-transition-delay: .3s;
+              transition-delay: .3s; }
+    [data-carouselvideo] .left .top-left .anim2,
+    [data-carouselvideo] .left .bottom-left .anim2,
+    [data-carouselvideo] .left .top-right .anim2,
+    [data-carouselvideo] .left .bottom-right .anim2, [data-carouselvideo] .active .top-left .anim2,
+    [data-carouselvideo] .active .bottom-left .anim2,
+    [data-carouselvideo] .active .top-right .anim2,
+    [data-carouselvideo] .active .bottom-right .anim2, [data-carouselvideo] .right .top-left .anim2,
+    [data-carouselvideo] .right .bottom-left .anim2,
+    [data-carouselvideo] .right .top-right .anim2,
+    [data-carouselvideo] .right .bottom-right .anim2 {
+      -webkit-transition-delay: .4s;
+              transition-delay: .4s; }
+    [data-carouselvideo] .left .top-left .anim3,
+    [data-carouselvideo] .left .bottom-left .anim3,
+    [data-carouselvideo] .left .top-right .anim3,
+    [data-carouselvideo] .left .bottom-right .anim3, [data-carouselvideo] .active .top-left .anim3,
+    [data-carouselvideo] .active .bottom-left .anim3,
+    [data-carouselvideo] .active .top-right .anim3,
+    [data-carouselvideo] .active .bottom-right .anim3, [data-carouselvideo] .right .top-left .anim3,
+    [data-carouselvideo] .right .bottom-left .anim3,
+    [data-carouselvideo] .right .top-right .anim3,
+    [data-carouselvideo] .right .bottom-right .anim3 {
+      -webkit-transition-delay: .5s;
+              transition-delay: .5s; }
+    [data-carouselvideo] .left .top-left .anim4,
+    [data-carouselvideo] .left .bottom-left .anim4,
+    [data-carouselvideo] .left .top-right .anim4,
+    [data-carouselvideo] .left .bottom-right .anim4, [data-carouselvideo] .active .top-left .anim4,
+    [data-carouselvideo] .active .bottom-left .anim4,
+    [data-carouselvideo] .active .top-right .anim4,
+    [data-carouselvideo] .active .bottom-right .anim4, [data-carouselvideo] .right .top-left .anim4,
+    [data-carouselvideo] .right .bottom-left .anim4,
+    [data-carouselvideo] .right .top-right .anim4,
+    [data-carouselvideo] .right .bottom-right .anim4 {
+      -webkit-transition-delay: .6s;
+              transition-delay: .6s; }
+    [data-carouselvideo] .left .top-left .anim5,
+    [data-carouselvideo] .left .bottom-left .anim5,
+    [data-carouselvideo] .left .top-right .anim5,
+    [data-carouselvideo] .left .bottom-right .anim5, [data-carouselvideo] .active .top-left .anim5,
+    [data-carouselvideo] .active .bottom-left .anim5,
+    [data-carouselvideo] .active .top-right .anim5,
+    [data-carouselvideo] .active .bottom-right .anim5, [data-carouselvideo] .right .top-left .anim5,
+    [data-carouselvideo] .right .bottom-left .anim5,
+    [data-carouselvideo] .right .top-right .anim5,
+    [data-carouselvideo] .right .bottom-right .anim5 {
+      -webkit-transition-delay: .7s;
+              transition-delay: .7s; }
+    [data-carouselvideo] .left .top-left .anim6,
+    [data-carouselvideo] .left .bottom-left .anim6,
+    [data-carouselvideo] .left .top-right .anim6,
+    [data-carouselvideo] .left .bottom-right .anim6, [data-carouselvideo] .active .top-left .anim6,
+    [data-carouselvideo] .active .bottom-left .anim6,
+    [data-carouselvideo] .active .top-right .anim6,
+    [data-carouselvideo] .active .bottom-right .anim6, [data-carouselvideo] .right .top-left .anim6,
+    [data-carouselvideo] .right .bottom-left .anim6,
+    [data-carouselvideo] .right .top-right .anim6,
+    [data-carouselvideo] .right .bottom-right .anim6 {
+      -webkit-transition-delay: .8s;
+              transition-delay: .8s; }
+    [data-carouselvideo] .left .top-left .anim7,
+    [data-carouselvideo] .left .bottom-left .anim7,
+    [data-carouselvideo] .left .top-right .anim7,
+    [data-carouselvideo] .left .bottom-right .anim7, [data-carouselvideo] .active .top-left .anim7,
+    [data-carouselvideo] .active .bottom-left .anim7,
+    [data-carouselvideo] .active .top-right .anim7,
+    [data-carouselvideo] .active .bottom-right .anim7, [data-carouselvideo] .right .top-left .anim7,
+    [data-carouselvideo] .right .bottom-left .anim7,
+    [data-carouselvideo] .right .top-right .anim7,
+    [data-carouselvideo] .right .bottom-right .anim7 {
+      -webkit-transition-delay: .9s;
+              transition-delay: .9s; }
+  [data-carouselvideo] .anim1, [data-carouselvideo] .anim2, [data-carouselvideo] .anim3, [data-carouselvideo] .anim4, [data-carouselvideo] .anim5, [data-carouselvideo] .anim6, [data-carouselvideo] .anim7 {
+    left: 50px;
+    opacity: 0; }

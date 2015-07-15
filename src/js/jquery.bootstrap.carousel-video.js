@@ -51,21 +51,27 @@
         $video.remove();
         return;
       }
-      $video.wrap('<div></div>');
+      $video.wrap('<div class="video-wrapper"></div>');
 
       if($(slide).hasClass('active')){
         $video[0].play();
       }
       $(slide).on('addClass', function(e, classes){
+        var current_video = $(this).find('video');
         if(classes.indexOf('active') >= 0){
-          console.log('Play', $video);
-          $video[0].play();
+          current_video[0].play();
+          console.log('play');
+        }
+        if((classes.indexOf('left') >= 0)||(classes.indexOf('right') >= 0)){
+          current_video[0].pause();
+          console.log('pause');
         }
       });
       $(slide).on('removeClass', function(e, classes){
+        var current_video = $(this).find('video');
         if(classes.indexOf('active') >= 0){
-          console.log('Stop');
-          $video[0].pause();
+          current_video[0].pause();
+          console.log('pause');
         }
       });
     },
@@ -75,7 +81,6 @@
       var self = this;
       var height = browser('height') - this.options.paddingBottom;
       this.$element.find('.item').css('height', height+'px');
-    console.log('setSize', height);
 
       this.$element.find('.item video').each(function(){
         self.centerElement($(this));
